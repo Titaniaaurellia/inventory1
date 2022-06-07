@@ -14,12 +14,9 @@ use App\Http\Controllers\checklistController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/checklist', [checklistController::class,'index']);
-Route::get('/checklist/create', [checklistController::class,'create']);
+
+Route::get('/', [checklistController::class,'index']);
 Route::get('/checklist/{{id}}/edit', [checklistController::class,'edit']);
 Route::put('/checklist/{{id}}', [checklistController::class,'update']);
 
