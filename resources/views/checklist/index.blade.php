@@ -44,13 +44,13 @@
                                                 <form>
                                                 <div class="mb-3">
                                                     <label for="recipient-name" class="col-form-label">Nama Kategori:</label>
-                                                    <input type="text" class="form-control" id="recipient-name">
+                                                    <input type="text" class="form-control" id="recipient-name" placeholder="category name">
                                                 </div>
                                                 </form>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-light" data-bs-dismiss="modal">Batal</button>
-                                                <button type="button" class="btn btn-primary">Simpan</button>
+                                                <button type="submit" class="btn btn-primary" @click="Save()" data-bs-dismiss="modal">Simpan</button>
                                             </div>
                                         </div>
                                     </div>
@@ -66,13 +66,13 @@
                                                 <form>
                                                 <div class="mb-3">
                                                     <label for="recipient-name" class="col-form-label">Nama Kategori:</label>
-                                                    <input type="text" class="form-control" id="recipient-name">
+                                                    <input type="text" class="form-control" id="recipient-name" placeholder="category name">
                                                 </div>
                                                 </form>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-light" data-bs-dismiss="modal">Batal</button>
-                                                <button type="button" class="btn btn-primary">Simpan</button>
+                                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Simpan</button>
                                             </div>
                                         </div>
                                     </div>
@@ -81,30 +81,30 @@
                                 <div class="modal fade" id="ModalDelete" tabindex="-1" aria-labelledby="ModalDeleteLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-                                            <!-- <div class="modal-header">
-                                                <h5 class="modal-title" id="ModalDeleteLabel">Edit Data Kategori Checklist</h5>
-                                            </div> -->
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                 <h5 class="modal-title" id="ModalDeleteLabel"><i class="bi bi-x-circle" style="font-size:50px;color:red"></i></h5>
+                                            </div>
                                             <div class="modal-dialog modal-dialog-centered">
                                                  <h5 class="modal-title" id="ModalDeleteLabel">Apakah anda yakin?</h5>
                                             </div>
-                                            <div class="modal-body">
-                                                <form>
-                                                    <p><center>Apakah anda ingin menghapus data ini?</center></p>
-                                                    <p><center>Data yang sudah terhapus tidak dapat dikembalikan</center></p>
-                                                </form>
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                 <h7 class="modal-title" id="ModalDeleteLabel">
+                                                     <p><center>Apakah anda ingin menghapus data ini?</center></p>
+                                                     <p><center>Data yang sudah terhapus tidak dapat dikembalikan</center></p></h7>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-light" data-bs-dismiss="modal">Batal</button>
-                                                <button type="button" class="btn btn-danger">Hapus</button>
+                                                <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Hapus</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         
         <!-- /.container-fluid -->
     </div>
@@ -117,25 +117,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
     <script>
-        
+        // methods: {
+        //     Save: function(){
+        //         location.reload()
+        //     }
+        // }
     </script>
 @endsection
-
- <table class="table table-report -mt-2 datatables dataTable no-footer" id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info" style="width: 1184px;">
- <thead>
-     <tr>
-        <th class="whitespace nowrap sorting sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="#ID: activate to sort column descending" style="width: 97px;">#ID</th>
-        <th class="whitespace-nowrap sorting" tabindex="0" aria controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Nama: activate to sort column ascending" style="width: 155px;">Nama</th> 
-        <th class="whitespace-nowrap sorting" tabindex="0" aria-controls="DataTables Table_0" rowspan="1" colspan="1" aria-label="Urutan: activate to sort column ascending" style="width: 145px;">Urutan</th>
-        <th class="whitespace-nowrap sorting" tabindex="0" aria-controls="DataTables Table_0" rowspan="1" colspan="1" aria-label="Icon: activate to sort column ascending" style="width: 125px;">Icon</th> 
-        <th class="whitespace-nowrap sorting" tabindex="0" aria-controls="DataTables Table @" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 141px;">Status</th>
-        <th class="text-center whitespace-nowrap sorting_disabled" rowspan="1" colspan="1" aria-label="Aksi" style="width: 303px;">Aksi</th>
-    </tr>
-</thead>
-<tbody>
-    <tr class="add"></tr>
-    <tr class="even"></tr>
-    <tr class="odd"></tr>
-    <tr class="even"></tr>
-</tbody>
-</table>
