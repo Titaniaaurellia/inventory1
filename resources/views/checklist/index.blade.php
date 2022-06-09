@@ -29,8 +29,8 @@
                                     <tr>
                                         <th scope="row"><center>1</center></th>
                                         <td><center>Mark</center></td>
-                                        <td><center><a href="" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#ModalEdit"><i class="bi bi-pencil-square"></i>Edit</a> |
-                                            <a href="" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#ModalDelete"><i class="bi bi-trash"></i></a></center></td>
+                                        <td><center><a href="" class="btn btn" data-bs-toggle="modal" data-bs-target="#ModalEdit"><i class="bi bi-pencil-square"></i>Edit</a> |
+                                            <a href="" class="btn btn" data-bs-toggle="modal" data-bs-target="#ModalDelete" style="color:red"><i class="bi bi-trash" style="color:red"></i>Hapus</a></center></td>
                                     </tr>
                                 </thead>
                                 <!-- modal create -->
@@ -49,8 +49,8 @@
                                                 </form>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Batal</button>
-                                                <button type="submit" class="btn btn-primary" @click="Save()" data-bs-dismiss="modal">Simpan</button>
+                                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+                                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Simpan</button>
                                             </div>
                                         </div>
                                     </div>
@@ -71,7 +71,7 @@
                                                 </form>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Batal</button>
+                                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
                                                 <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Simpan</button>
                                             </div>
                                         </div>
@@ -92,8 +92,8 @@
                                                      <p><center>Apakah anda ingin menghapus data ini?</center></p>
                                                      <p><center>Data yang sudah terhapus tidak dapat dikembalikan</center></p></h7>
                                             </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Batal</button>
+                                            <div class="modal-footer text-center">
+                                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
                                                 <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Hapus</button>
                                             </div>
                                         </div>
@@ -112,15 +112,20 @@
 </div>
     <!-- End of Content Wrapper -->
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
     <script>
-        // methods: {
-        //     Save: function(){
-        //         location.reload()
-        //     }
-        // }
+       $(document).ready(function() {
+        // id modal yang ingin di listen event-nya ( listen event ketika modal hidden )
+        $('#ModalCreate').on('hidden.bs.modal', function() {
+            // log data -- untuk melihat apakah listen event sudah sesuai atau belum
+            console.log('ModalCreate hidden');
+            // atur nilai input nama di modal-tambah
+            $('#recipient-name').val('');
+        });
+		}); 
     </script>
 @endsection
