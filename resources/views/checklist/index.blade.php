@@ -87,15 +87,15 @@
                                             <div class="modal-dialog modal-dialog-centered">
                                                  <h5 class="modal-title" id="ModalDeleteLabel">Apakah anda yakin?</h5>
                                             </div>
-                                            <div class="modal-dialog modal-dialog-centered">
+                                            <div class="text-center">
                                                  <h7 class="modal-title" id="ModalDeleteLabel">
                                                      <p><center>Apakah anda ingin menghapus data ini?</center></p>
                                                      <p><center>Data yang sudah terhapus tidak dapat dikembalikan</center></p></h7>
                                             </div>
-                                            <div class="modal-footer text-center">
+                                            <div class="text-center">
                                                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
                                                 <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Hapus</button>
-                                            </div>
+                                            </div><br>
                                         </div>
                                     </div>
                                 </div>
