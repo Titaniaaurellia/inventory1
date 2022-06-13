@@ -14,10 +14,12 @@ use App\Http\Controllers\checklistController;
 |
 */
 
+Route::get('/', function(){
+    return view('layouts.master');
+});
 
-
-Route::get('/', [checklistController::class,'index']);
-Route::get('/checklist/{{id}}/edit', [checklistController::class,'edit']);
-Route::put('/checklist/{{id}}', [checklistController::class,'update']);
+// Route::get('/', [checklistController::class,'index']);
+// Route::get('/checklist/{{id}}/edit', [checklistController::class,'edit']);
+// Route::put('/checklist/{{id}}', [checklistController::class,'update']);
 
 
