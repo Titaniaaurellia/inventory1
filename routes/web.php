@@ -18,6 +18,10 @@ Route::get('/', function(){
     return view('layouts.master');
 });
 
+Route::get('/welcome', function(){
+    return view('welcome');
+});
+
 // Route::get('/', [checklistController::class,'index']);
 // Route::get('/checklist/{{id}}/edit', [checklistController::class,'edit']);
 // Route::put('/checklist/{{id}}', [checklistController::class,'update']);
