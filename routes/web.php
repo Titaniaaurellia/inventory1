@@ -22,6 +22,14 @@ Route::get('/welcome', function(){
     return view('welcome');
 });
 
+Route::get('/dashboard', function(){
+    return view('layouts.master');
+});
+
+Route::get('/item', function(){
+    return view('layouts.item');
+});
+
 // Route::get('/', [checklistController::class,'index']);
 // Route::get('/checklist/{{id}}/edit', [checklistController::class,'edit']);
 // Route::put('/checklist/{{id}}', [checklistController::class,'update']);
